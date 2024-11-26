@@ -4,7 +4,7 @@ This script helps identify and optionally replace deprecated NaviServer calls wi
 
 ## How It Works:
 - The script scans all `*.tcl` files within the current directory and its subdirectories.
-- Deprecated calls are replaced with updated ones.
+- Deprecated calls are reported and optionally replaced with updated ones.
 - Original files are preserved with the suffix `-original`.
 
 
