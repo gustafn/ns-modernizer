@@ -9,7 +9,7 @@ This script helps identify and optionally replace deprecated NaviServer calls wi
 
 
 ## Basic Usage:
-Run the script with the following command to process a directory tree:
+Run the script with the following command to process a directory tree with all subdirectories on all files with the .tcl extension:
 ```bash
 tclsh ns-modernizer.tcl -cd PATH_TO_TCL_FILES
 ```
@@ -26,6 +26,7 @@ Use the `-change` flag to update deprecated calls:
 ```bash
 tclsh ns-modernizer.tcl -change 1
 ```
+The script creates backup files by adding "-original" to the  changed files. If you run the script multiple times make sure to delete these backupfile to prevent hickups (see point 5).
 
 ### 2. List Differences:
 Use the `-diff` flag to review changes without making updates:
