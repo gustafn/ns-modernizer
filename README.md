@@ -40,6 +40,11 @@ configuration and parameters, may spool large content to files to
 conserve resources. The updated code may need to account for this
 behavior to function as expected.
 
+Note, that the script does not guarantee to find all deprecated
+NaviServer calls since in Tcl supports dynamic invocations with eval,
+or keeping commands/subcommands in variables, etc., which are not
+tracked by the script.
+
 ### 2. List Differences:
 Use the `-diff` flag to review changes without making updates:
 ```bash
