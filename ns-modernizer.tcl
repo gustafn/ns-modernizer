@@ -38,7 +38,7 @@ array set opt {-cd . -reset 0 -change 0 -diff 0 -path . -name *tcl}
 array set opt $argv
 
 cd $opt(-cd)
-puts "changed working directory to [pwd]"
+puts "working directory is [pwd]"
 
 if {$opt(-reset)} {
     foreach file [exec find -L $opt(-path) -type f -name *-original] {
@@ -66,9 +66,10 @@ set tbd {
     ns_paren
     ns_tagelement
     ns_tagelementset
+
+    ns_requestauthorize
+    ns_checkurl
 }
-#    ns_requestauthorize
-#    ns_checkurl
 
 set deprecated {
     "Paren"
