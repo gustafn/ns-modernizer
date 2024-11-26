@@ -22,11 +22,23 @@ tclsh ns-modernizer.tcl -cd /usr/local/oacs-head/openacs-4/packages/
 ## Advanced Usage:
 
 ### 1. Perform Updates:
-Use the `-change` flag to update deprecated calls:
+Use the `-change` flag to update most deprecated calls:
 ```bash
 tclsh ns-modernizer.tcl -change 1
 ```
-The script creates backup files by adding "-original" to the  changed files. If you run the script multiple times make sure to delete these backupfile to prevent hickups (see point 5).
+
+The script creates backup files by appending the suffix `-original` to
+any modified files. If you run the script multiple times, be sure to
+delete these backup files to avoid conflicts or unexpected behavior
+(see point 5).
+
+The script is designed to handle straightforward changes
+automatically, but more complex adjustments may require manual
+intervention.  For instance, older code might assume that all received
+data is spooled to memory. However, NaviServer, depending on its
+configuration and parameters, may spool large content to files to
+conserve resources. The updated code may need to account for this
+behavior to function as expected.
 
 ### 2. List Differences:
 Use the `-diff` flag to review changes without making updates:
