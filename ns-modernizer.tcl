@@ -233,6 +233,7 @@ foreach file [exec find -L $opt(-path) -type f -name $opt(-name)] {
         incr changes [regsub -all {ns_thread\s+start\M} $c {ns_thread create} c]
         incr changes [regsub -all {ns_tmpnam\M} $c {ns_mktemp} c]
         incr changes [regsub -all {ns_unlink\M} $c {file delete} c]
+        incr changes [regsub -all {ns_checkurl\M} $c {ns_requestauthorize} c]
 
         #
         # The following changes could be made automatically as indicated, but the
