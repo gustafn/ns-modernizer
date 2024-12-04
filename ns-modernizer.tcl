@@ -58,20 +58,18 @@ if {$opt(-diff)} {
 }
 
 set tbd {
-    ns_browsermatch
-    ns_choosecharset
-    ns_cookiecharset
-    ns_formfieldcharset
-    ns_formvalueput
-    ns_paren
-    ns_tagelement
-    ns_tagelementset
-
-    ns_requestauthorize
-    ns_checkurl
 }
 
 set deprecated {
+    "ns_browsermatch"
+    "ns_choosecharset"
+    "ns_cookiecharset"
+    "ns_formfieldcharset"
+    "ns_formvalueput"
+    "ns_paren"
+    "ns_tagelement"
+    "ns_tagelementset"
+
     "Paren"
     "env"
     "getformdata"
@@ -83,6 +81,7 @@ set deprecated {
     "ns_adp_safeeval"
     "ns_adp_stream"
     "ns_cancel"
+    "ns_checkurl"
     "ns_chmod"
     "ns_conncptofp"
     "ns_connsendfp"
