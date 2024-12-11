@@ -61,34 +61,35 @@ set tbd {
 }
 
 set deprecated {
-    "ns_browsermatch"
-    "ns_choosecharset"
-    "ns_cookiecharset"
-    "ns_formfieldcharset"
-    "ns_formvalueput"
-    "ns_paren"
-    "ns_tagelement"
-    "ns_tagelementset"
-
+set deprecated {
     "Paren"
     "env"
     "getformdata"
     "issmallint"
+    "keyldel"
+    "keylget"
+    "keylkeys"
+    "keylset"
     "ns_adp_compress"
     "ns_adp_eval"
     "ns_adp_mime"
     "ns_adp_registertag"
     "ns_adp_safeeval"
     "ns_adp_stream"
+    "ns_browsermatch"
     "ns_cancel"
     "ns_checkurl"
     "ns_chmod"
+    "ns_choosecharset"
     "ns_conncptofp"
     "ns_connsendfp"
+    "ns_cookiecharset"
     "ns_cp"
     "ns_cpfp"
     "ns_db verbose"
     "ns_event"
+    "ns_formfieldcharset"
+    "ns_formvalueput"
     "ns_getchannels"
     "ns_geturl"
     "ns_hmac_sha2"
@@ -115,6 +116,7 @@ set deprecated {
     "ns_limits_set"
     "ns_link"
     "ns_mkdir"
+    "ns_paren"
     "ns_parsetime"
     "ns_passwordcheck"
     "ns_pooldescription"
@@ -131,6 +133,8 @@ set deprecated {
     "ns_sha2"
     "ns_startcontent"
     "ns_subnetmatch"
+    "ns_tagelement"
+    "ns_tagelementset"
     "ns_thread begin"
     "ns_thread begindetached"
     "ns_thread get"
@@ -142,6 +146,8 @@ set deprecated {
     "ns_updateheader"
     "ns_var"
     "ns_writecontent"
+}
+
 }
 
 set toBeModernized {
